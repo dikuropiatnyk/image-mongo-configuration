@@ -10,9 +10,13 @@ instance.
    * if you want to clear all volumes, just remove and recreate it
    * to connect to the DB programmatically, you can use this command in terminal:
    ```bash
-   docker exec -it mongo-local mongosh "mongodb://<usr>:<pwd>@localhost:27017" 
+   docker exec -it mongo-local mongosh "mongodb://<user>:<pwd>@localhost:27017" 
    ```
 2. K8s manifest to deploy standalone instance in cluster - `mongo-deploy.yml`.
+   * to get this pod available outside the cluster, use this command:
+   ```bash
+   kubectl port-forward <mongodb-pod-name> 27017:27017
+   ```
 
 ### Important notes
 * all options are solely for development purposes!
