@@ -12,7 +12,7 @@ instance.
    ```bash
    docker exec -it mongo-local mongosh "mongodb://<user>:<pwd>@localhost:27017" 
    ```
-2. K8s manifest to deploy standalone instance in cluster - `mongo-deploy.yml`.
+2. K8s manifest to deploy standalone instance in cluster - `manifest.yml`.
    * to get this pod available outside the cluster, use this command:
    ```bash
    kubectl port-forward <mongodb-pod-name> 27017:27017
